@@ -27,6 +27,7 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        LabelAgendaPainelFundo = new javax.swing.JLabel();
         LabelAgenda = new javax.swing.JLabel();
         LabelId = new javax.swing.JLabel();
         LabelCliente = new javax.swing.JLabel();
@@ -46,8 +47,9 @@ public class Agenda extends javax.swing.JFrame {
         ButtonAgendar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TableAgendamentos = new javax.swing.JTable();
-        LabelAgendaPainelFundo = new javax.swing.JLabel();
         LabelAgendaFundo = new javax.swing.JLabel();
+
+        LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -147,9 +149,6 @@ public class Agenda extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TableAgendamentos);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 1120, 330));
-
-        LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
-        getContentPane().add(LabelAgendaPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 1000));
 
         LabelAgendaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/AgendaFundo.png"))); // NOI18N
         getContentPane().add(LabelAgendaFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 1000));
