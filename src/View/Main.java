@@ -11,7 +11,6 @@ public class Main {
         Cliente cliente = new Cliente(1, "Henrique", 'm', "61998825651", "qnp conj f casa 16");
         
         Usuario usuario = new Usuario(1, "Alvaro", "jubirildo");
-        System.out.println("Nome: "+usuario.getNome()); 
-        System.out.println("Senha: "+usuario.getSenha());
+        
     }
 }
