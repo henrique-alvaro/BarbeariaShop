@@ -2,7 +2,6 @@ package Model;
 
 import java.util.Date;
 
-
 public class Usuario extends Pessoa {
     protected String senha;
     protected String nivelAcesso;
@@ -12,7 +11,7 @@ public class Usuario extends Pessoa {
         this.senha = senha;
     }
 
-    public Usuario(String senha, String nivelAcesso, int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg) {
+    public Usuario(String senha, String nivelAcesso, int id, String nome, char sexo, String dataNascimento, String telefone, String email, String rg) {
         super(id, nome, sexo, dataNascimento, telefone, email, rg);
         this.senha = senha;
         this.nivelAcesso = nivelAcesso;
