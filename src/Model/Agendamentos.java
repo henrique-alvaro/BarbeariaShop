@@ -38,7 +38,6 @@ public class Agendamentos {
     }
     
     
-
     public int getId() {
         return id;
     }
