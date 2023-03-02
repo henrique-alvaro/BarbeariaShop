@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
-/**
- *
- * @author tiago
- */
+import Controller.MenuPrincipalContoller;
+
 public class MenuPrincipal extends javax.swing.JFrame {
+
+    private final MenuPrincipalContoller controller;
 
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
+        this.controller = new MenuPrincipalContoller(this);
     }
 
     /**
@@ -76,6 +72,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuItemAgenda.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         MenuItemAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/agenda32-icon.png"))); // NOI18N
         MenuItemAgenda.setText("  Agenda");
+        MenuItemAgenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemAgendaActionPerformed(evt);
+            }
+        });
         MenuOperacao.add(MenuItemAgenda);
 
         jMenuBar1.add(MenuOperacao);
@@ -107,6 +108,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void MenuItemRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRelatorioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuItemRelatorioActionPerformed
+
+    private void MenuItemAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemAgendaActionPerformed
+        this.controller.navegarParaAgenda();
+    }//GEN-LAST:event_MenuItemAgendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,4 +160,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu MenuRelatorio;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
+
+    
 }
