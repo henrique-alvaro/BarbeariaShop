@@ -1,6 +1,5 @@
 package Model;
 
-import java.util.Date;
 
 public class Usuario extends Pessoa {
     protected String senha;
@@ -16,6 +15,7 @@ public class Usuario extends Pessoa {
         this.senha = senha;
         this.nivelAcesso = nivelAcesso;
     }
+    
 
     public String getSenha() {
         return senha;

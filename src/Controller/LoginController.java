@@ -23,7 +23,7 @@ public class LoginController {
         Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
         
         if(usuarioAutenticado != null){
-            //navegar para menur principal
+            //navegar para menu principal
             MenuPrincipal menu = new MenuPrincipal();
             menu.setVisible(true);
             this.view.dispose();

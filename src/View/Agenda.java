@@ -5,17 +5,20 @@
  */
 package View;
 
+import Controller.AgendaController;
+
 /**
  *
  * @author tiago
  */
 public class Agenda extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Agenda
-     */
+    private final AgendaController controller;
+    
     public Agenda() {
         initComponents();
+        controller = new AgendaController(this);
+        iniciar();
     }
 
     /**
@@ -51,7 +54,7 @@ public class Agenda extends javax.swing.JFrame {
 
         LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LabelAgenda.setFont(new java.awt.Font("Liberation Sans", 1, 36)); // NOI18N
@@ -226,4 +229,8 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controller.atualizaTabela();
+    }
 }
