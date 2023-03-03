@@ -1,7 +1,7 @@
 package View;
 
 import Controller.LoginController;
-import Model.DAO.Banco;
+import Model.DAO.*;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;

@@ -18,7 +18,9 @@ public class AgendaController {
     
     public void atualizaTabela(){
         AgendamentoDAO agendamentoDAO = new AgendamentoDAO();
-        ArrayList<Agendamentos> agendaamentos = agendamentoDAO.selectAll();
+        ArrayList<Agendamentos> agendamentos = agendamentoDAO.selectAll();
+        
+        helper.preencherTabela(agendamentos);
         
         
     }
